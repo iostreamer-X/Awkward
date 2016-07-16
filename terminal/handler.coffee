@@ -6,13 +6,7 @@ module.exports = (command)->
     awkward.log chalk.green 'Well that\'s awkward!'
     return
   if (command.indexOf 'cd ') > -1 or command is 'cd'
-    location = ((loc)->
-      loc = loc.split(' ')[1]
-      if loc
-        loc
-      else
-        '/home/'+process.env.USER
-      )(command)
+    location = command.split(' ')[1] ? '/home/'+process.env.USER  
     process.chdir location
     awkward.log chalk.green "Changed directory to #{location}"
     return
