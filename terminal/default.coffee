@@ -1,5 +1,5 @@
 default_catch = (args,cb)->
-  this.log args
+  require('./handler') args.words
   cb()
 
 module.exports = (awkward)->
