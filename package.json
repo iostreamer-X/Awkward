@@ -1,0 +1,27 @@
+{
+  "name": "awkward",
+  "version": "1.0.0",
+  "description": "A NodeJS based terminal emulator. Everything is an Object!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iostreamer-X/Awkward.git"
+  },
+  "keywords": [
+    "Terminal",
+    "Emulator"
+  ],
+  "author": "iostreamer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iostreamer-X/Awkward/issues"
+  },
+  "homepage": "https://github.com/iostreamer-X/Awkward#readme",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "vorpal": "^1.11.2"
+  }
+}
