@@ -1,7 +1,9 @@
 default_catch = (args,cb)->
-  require('./handler') args.words
+  require('./handler') args
   cb()
 
 module.exports = (awkward)->
-  awkward.catch('[words...]')
+  awkward.mode 'repl'
+         .delimiter 'ward:~$'
+         .description 'Enter the awkward zone.'
          .action default_catch
