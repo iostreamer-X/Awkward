@@ -3,7 +3,7 @@ exec = child_process.exec
 getStructured = require './structure'
 displayFormatted = require './format'
 run = (command,cb)->
-  cp = exec(command, (e,r,b)->
+  cp = exec(command, maxBuffer:200*200*1024, (e,r,b)->
     if e
       awkward.log chalk.red e
       return
