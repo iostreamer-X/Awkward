@@ -29,7 +29,7 @@ mode_js = (command, fn) ->
     try
       eval 'structured_op.'+fn
     catch error
-      awkward.log chalk.red 'Invalid syntax!'
+      awkward.log chalk.red error
 
 
 module.exports = (command) ->

@@ -1,5 +1,11 @@
+util = (require '../util')
+tryParseJSON = util.tryParseJSON
+
 module.exports = (data) ->
   array = []
+  if json = tryParseJSON data
+    array.push json
+    return array
   lines = data.split '\n'
   lines = lines.filter (line)->
     line.length > 0
