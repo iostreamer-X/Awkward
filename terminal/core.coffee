@@ -2,6 +2,8 @@ child_process = require 'child_process'
 exec = child_process.exec
 getStructured = require './structure'
 displayFormatted = require './format'
+
+formatted_commands = ['ls','cat']
 run = (command,cb)->
   cp = exec(command, maxBuffer:200*200*1024, (e,r,b)->
     if e
@@ -14,7 +16,7 @@ run = (command,cb)->
 
 mode_shell = (command)->
   run command, (data)->
-    if command.startsWith 'ls'
+    if _.find(formatted_commands, (for_command)->command.startsWith for_command)
       displayFormatted data
     else
       awkward.log ''
