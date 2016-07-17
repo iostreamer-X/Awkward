@@ -17,30 +17,22 @@ Once the program notices that the user wants to run js functions, it runs the co
 and stores the result in an array. Let's take the example of `ps`:
 
 ###Shell output
-
+``` shell
 PID TTY          TIME CMD
-<br/>
 13750 pts/14   00:00:00 bash
-<br/>
 25193 pts/14   00:00:03 node
-<br/>
 25271 pts/14   00:00:00 sh
-<br/>
 25272 pts/14   00:00:00 ps
-
+```
 
 ###Corresponding array
-
+``` js
 [ [ 'PID', 'TTY', 'TIME', 'CMD' ],
-<br/>
 [ '13750', 'pts/14', '00:00:00', 'bash' ],
-<br/>
 [ '25193', 'pts/14', '00:00:03', 'node' ],
-<br/>
 [ '25283', 'pts/14', '00:00:00', 'sh' ],
-<br/>
 [ '25284', 'pts/14', '00:00:00', 'ps' ] ]
-
+```
 
 And the functions you pass are evaluated
 <br/>
