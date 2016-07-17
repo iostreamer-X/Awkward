@@ -1,7 +1,7 @@
 child_process = require 'child_process'
 exec = child_process.exec
 getStructured = require './structure'
-
+displayFormatted = require './format'
 run = (command,cb)->
   cp = exec(command, (e,r,b)->
     if e
@@ -14,14 +14,20 @@ run = (command,cb)->
 
 mode_shell = (command)->
   run command, (data)->
-    awkward.log ''
-    awkward.log data
+    if command.startsWith 'ls'
+      displayFormatted data
+    else
+      awkward.log ''
+      awkward.log data
 
 mode_js = (command, fn) ->
   run command, (data)->
     structured_op = getStructured data
     fn = fn.replace 'console.log', 'awkward.log'
-    eval 'structured_op.'+fn
+    try
+      eval 'structured_op.'+fn
+    catch error
+      awkward.log chalk.red 'Invalid syntax!'
 
 
 module.exports = (command) ->

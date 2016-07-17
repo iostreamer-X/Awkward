@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/iostreamer-X/Awkward#readme",
   "dependencies": {
+    "cliff": "^0.1.10",
     "coffee-script": "^1.10.0",
+    "underscore": "^1.8.3",
     "vorpal": "^1.11.2"
   }
 }

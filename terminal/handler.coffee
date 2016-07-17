@@ -4,7 +4,11 @@ module.exports = (command)->
     return
   if (command.indexOf 'cd ') > -1 or command is 'cd'
     location = command.split(' ')[1] ? '/home/'+process.env.USER
-    process.chdir location
+    try
+      process.chdir location
+    catch error
+      awkward.log chalk.red 'No such directory!'
+      return
     awkward.log chalk.green "Changed directory to #{location}"
     return
 

@@ -1,5 +1,6 @@
 vorpal = require 'vorpal'
 chalk = vorpal().chalk
+_ = require 'underscore'
 
 awkward = vorpal()
        .delimiter process.env.USER+'@awk'
@@ -8,6 +9,7 @@ awkward = vorpal()
 
 global.chalk = chalk
 global.awkward = awkward
+global._ = _
 
 require('./terminal/default.coffee')(awkward)
 
