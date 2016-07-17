@@ -11,7 +11,7 @@ global.chalk = chalk
 global.awkward = awkward
 global._ = _
 
-require('./terminal/default.coffee')(awkward)
+require('./terminal/main')(awkward)
 
 awkward.exec 'repl'
 
