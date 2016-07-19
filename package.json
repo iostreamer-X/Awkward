@@ -2,7 +2,6 @@
   "name": "awkward",
   "version": "1.0.0",
   "description": "A NodeJS based terminal emulator. Everything is an Object!",
-  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,5 +24,9 @@
     "coffee-script": "^1.10.0",
     "underscore": "^1.8.3",
     "vorpal": "^1.11.2"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "awkward": "app.js"
   }
 }
