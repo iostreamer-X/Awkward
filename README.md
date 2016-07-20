@@ -14,11 +14,11 @@ Enter, awkward. It's a NodeJS based terminal emulator. It lets you run
 javascript functions on system commands.
 
 For example:
-`ls().forEach((a)=>{console.log(a[0], a[0].length)})`
+`ls().forEach(a => console.log(a[0], a[0].length))`
 
 One can also use flags and piped commands like this:
 <br/>
-`(ps -ef)().map((a)=>{return [a[0],a[7]]}).forEach((a)=>{console.log(a)})`
+`(ps -ef)().map(a => [a[0], a[7]]).forEach(a => console.log(a))`
 
 ### Update:
 
