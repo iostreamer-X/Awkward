@@ -11,6 +11,7 @@ run = (command,cb)->
       return
     )
   cp.stdout.on('data', (data)->
+    data = data.toString()
     cb data
     )
 
