@@ -16,6 +16,10 @@ javascript functions on system commands.
 For example:
 `ls().forEach((a)=>{console.log(a[0], a[0].length)})`
 
+One can also use flags and piped commands like this:
+<br/>
+`(ps -ef)().map((a)=>{return [a[0],a[7]]}).forEach((a)=>{console.log(a)})`
+
 ### Update:
 
 Underscore added as a dependency and now you can use it in the awkward terminal
@@ -50,9 +54,16 @@ PID TTY          TIME CMD
 [ '25284', 'pts/14', '00:00:00', 'ps' ] ]
 ```
 
-And the functions you pass are evaluated
+And the functions you pass are `eval`uated as:
 <br/>
-and run as `resulting_array.<functions_you_pass>`
+ `resulting_array.<functions_you_pass>`.
+
+Which actually is the only supported syntax, for now. One can only chain
+commands and functions like this:
+<br/>
+`(command).function((elem)=>{})`
+
+So, doing `console.log(ls())` won't work, for now.  
 
 # Demo
 
