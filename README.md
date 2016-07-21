@@ -1,5 +1,5 @@
 # Awkward
-A NodeJS based terminal emulator. Everything is an Object!
+A NodeJS based shell. Everything is an Object!
 
 # Install
 
@@ -10,7 +10,7 @@ To me, awk is powerful but really weird. Often times I want to get some informat
 out of a command which gives a structured output but I get discouraged because
 I am really lazy.
 
-Enter, awkward. It's a NodeJS based terminal emulator. It lets you run
+Enter, awkward. It's a NodeJS based shell. It lets you run
 javascript functions on system commands.
 
 For example:
