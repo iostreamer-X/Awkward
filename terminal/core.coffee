@@ -26,7 +26,7 @@ mode_shell = (command)->
 mode_js = (command, fn) ->
   run command, (data)->
     structured_op = getStructured data
-    fn = fn.replace 'console.log', 'awkward.log'
+    fn = fn.replace 'console.log', 'awkward.log.bind(awkward)'
     try
       eval 'structured_op.'+fn
     catch error
