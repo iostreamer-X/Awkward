@@ -1,9 +1,13 @@
 vorpal = require 'vorpal'
 chalk = vorpal().chalk
 _ = require 'underscore'
+os = require 'os'
+
+user = process.env.USER
+user = process.env.USERNAME if (os.platform() is "win32")
 
 awkward = vorpal()
-       .delimiter process.env.USER+'@awk'
+       .delimiter user + '@awk'
        .localStorage 'awkward@iostreamer'
        .history 'awkward@iostreamer/history'
 
