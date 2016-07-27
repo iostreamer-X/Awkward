@@ -4,7 +4,7 @@ _ = require 'underscore'
 os = require 'os'
 
 user = process.env.USER
-user = process.env.USERNAME if (os.platform() is "win32")
+user = process.env.USERNAME if os.platform() is "win32"
 
 awkward = vorpal()
        .delimiter user + '@awk'
