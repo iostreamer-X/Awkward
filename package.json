@@ -1,6 +1,6 @@
 {
   "name": "awkward",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A NodeJS based terminal emulator. Everything is an Object!",
   "scripts": {
     "test": "./node_modules/mocha/bin/./mocha ./test"

@@ -1,4 +1,6 @@
 # Awkward
+[![Build Status](https://travis-ci.org/iostreamer-X/Awkward.png)](https://travis-ci.org/iostreamer-X/Awkward)
+
 A NodeJS based shell. Everything is an Object!
 
 # Install
