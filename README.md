@@ -1,6 +1,7 @@
 # Awkward
-[!Build Status](https://travis-ci.org/iostreamer-X/Awkward.png)](https://travis-ci.org/iostreamer-X/Awkward)
-[!Brag](https://labs.turbo.run/git-brag?repo=Awkward&user=iostreamer-X&maxn-3000)
+[![Build Status](https://travis-ci.org/iostreamer-X/Awkward.png)](https://travis-ci.org/iostreamer-X/Awkward)
+
+[![Brag](https://labs.turbo.run/git-brag?repo=Awkward&user=iostreamer-X&maxn-3000)
 
 A NodeJS based shell. Everything is an Object!
 
